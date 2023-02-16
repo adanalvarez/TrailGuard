@@ -26,6 +26,10 @@ Once the AWS credentials are configured just run:
 ```
 go run awstrailguard.go
 ```
+Or download the binary and execute it:
+```
+./AWSTrailGuard
+```
 
 To transform the DOT file into a PNG, you need [Graphviz](https://graphviz.org/). You can use the DOT file to create a PNG.
 
