@@ -1,4 +1,4 @@
-module github.com/adanalvarez/AWSTrailGuard
+module github.com/adanalvarez/TrailGuard
 
 go 1.18
 

@@ -1,4 +1,7 @@
-# AWSTrailGuard
+# TrailGuard
+<p align="center">
+  <img src="./TrailGuard.png" alt="TrailGuard" width="300" />
+</p>
 Tool to check the CloudTrail configuration and the services where trails are sent, to detect potential attacks to CloudTrail logging.
 
 ## Introduction
@@ -7,7 +10,7 @@ CloudTrail is a valuable service provided by AWS that enables the logging and tr
 
 Because Cloudtrail configuration usually is well monitored, any attempt to stop logging, delete trail, or update won't be allowed and might trigger a security alert. Adversaries might try to disturb the logs by attacking other services that are equally important in many configurations, such as the S3 bucket and its notifications or Cloudwatch log groups and its subscription filters.
 
-AWSTrailGuard provides a simple and efficient way to get better visibility of the services where the logs are being sent, checking if logs are sent to S3 and CloudWatch and if the S3 has any Bucket notifications or if Cloudwatch has any Subscription filters. The tool prints the information on the console and generates a DOT file with the diagram. 
+TrailGuard provides a simple and efficient way to get better visibility of the services where the logs are being sent, checking if logs are sent to S3 and CloudWatch and if the S3 has any Bucket notifications or if Cloudwatch has any Subscription filters. The tool prints the information on the console and generates a DOT file with the diagram. 
 
 ## Usage
 
@@ -24,11 +27,11 @@ The ReadOnlyAccess or SecurityAudit are enought for the script to work.
 Once the AWS credentials are configured just run:
 
 ```
-go run awstrailguard.go
+go run trailguard.go
 ```
 Or download the binary and execute it:
 ```
-./AWSTrailGuard
+./TrailGuard
 ```
 
 To transform the DOT file into a PNG, you need [Graphviz](https://graphviz.org/). You can use the DOT file to create a PNG.
